@@ -16,11 +16,11 @@ document.querySelector(".togglebtn").addEventListener("click",function(){
     if( document.querySelector(".menu").getAttribute("src") == "images/icon-menu.svg"){
      document.querySelector(".menu").src = "images/icon-close-menu.svg";
      document.querySelector(".navsection").style.display = "flex";
-
+    document.querySelector(".blur-effect").style.display = "flex";
    }else if( document.querySelector(".menu").getAttribute("src") == "images/icon-close-menu.svg"){
    document.querySelector(".menu").src = "images/icon-menu.svg";
    document.querySelector(".navsection").style.display = "none";
-
+   document.querySelector(".blur-effect").style.display = "none";
 
    }
 });
