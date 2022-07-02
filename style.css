@@ -3,9 +3,12 @@
   margin: 0;
   padding:0;
   box-sizing: border-box;
+  font-size: 16px;
+
 }
 body{
-  font-size: 16px;
+  font-family: 'Epilogue', sans-serif;
+  background-color: hsl(0, 0%, 98%);
 }
 a{
   text-decoration: none;
@@ -41,9 +44,9 @@ nav section{
   flex-direction: column;
   justify-content:flex-start;
   align-items: flex-end;
-  background-color: orange;
   padding: 100px 30px 0 30px;
   display: none;
+  background-color: #FFFF;
 }
 .dropdown-content{
   display: flex;
@@ -52,8 +55,7 @@ nav section{
 }
 .togglebtn{
   z-index: 111;
-  height:20px;
-  width:20px;
+
 }
 .features, .company, .carriers, .about, .login, .register{
   align-self: flex-start;
@@ -67,7 +69,7 @@ nav section{
 .features .dropdown-content a, .features button, .company .dropdown-content a, .company button{
   padding-bottom: 30px ;
   cursor: pointer;
-  
+
 }
 .features .dropdown-content, .company .dropdown-content{
  width:80%;
@@ -89,7 +91,178 @@ text-align: center;
   display: flex;
   align-items: center;
 }
-
 .show{
 display: flex;
+}
+.blur-effect{
+  height:100vh;
+  width:35vw;
+  background-color:black;
+  position: absolute;
+  top:0;
+  z-index: 1111;
+  opacity: 0.5;
+  display: none;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100vw;
+  height:90vh;
+}
+ .firstchild{
+  order:1;
+  width:100%;
+  height:55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding:30px 5px;
+}
+.firstchild p{
+  padding:0 5px;
+  text-align: center;
+  line-height: 1.5;
+  color:hsl(0, 0%, 41%);
+}
+.firstchild h1{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.firstchild a{
+  border: 1px solid hsl(0, 0%, 8%);
+  padding: 10px 15px;
+  background-color: hsl(0, 0%, 8%);
+  color:hsl(0, 0%, 98%);
+  border-radius: 10px;
+}
+
+.secondchild{
+width:100%;
+height:45%;
+}
+.secondchild img{
+  height:100%;
+  width:100%;
+object-fit:fill;
+}
+.clients{
+  width:100%;
+  display: flex;
+  justify-content:space-around;
+  padding:0 5px;
+}
+.clients img{
+  height:20px;
+  width:60px;
+}
+/* ------------------------------------------------------------------------------------------------- */
+@media Screen and (min-width:850px){
+  nav{
+    padding:30px;
+  }
+ .togglebtn{
+   display: none;
+ }
+ nav .logo{
+   width:84px;
+ }
+ nav section{
+   background-color: inherit;
+ }
+ .navsection{
+   position: static;
+   display: flex !important;
+   flex-direction: row;
+   padding:0;
+   height:100%;
+   width:90%;
+   justify-content:flex-start;
+   align-items: center;
+   padding-left:20px;
+ }
+ .register, .features, .carriers, .company, .login, .about, .register{
+   padding:0;
+   margin:0;
+   width:10%;
+   align-self: center;
+   margin-right: 10px;
+ }
+.about{
+  margin-right: 35%;
+}
+ .features, .company{
+  text-align: center;
+  display:flex;
+  align-items:center;
+  height: 18px;
+  width:12%;
+  position: relative;
+}
+.features .dropdown-content, .company .dropdown-content{
+  background-color: #FFFF;
+  position: absolute;
+  width:110%;
+  top:50px;
+  right:0;
+  align-items: center;
+  justify-content:space-around;
+  Height:200px;
+  border-radius: 5px;
+  box-shadow:4px 6px 31px 0px rgba(0,0,0,0.41);
+}
+.features .dropdown-content a{
+padding: 0 !important;
+}
+
+.company .dropdown-content{
+  width:110%;
+}
+.about, .carriers{
+  text-align: center;
+}
+.features button, .company button{
+  padding: 0;
+  text-align: center;
+  width:100%;
+  height:100%;
+}
+.register{
+  padding:7px 13px;
+  border-radius: 9px;
+}
+main{
+  flex-direction: row;
+  padding:4% 10%;
+}
+.firstchild{
+  order:0;
+  height:100%;
+  width:60%;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0;
+}
+.firstchild h1{
+  font-size: 4.5rem;
+  width:70%;
+}
+.firstchild p{
+  text-align: left;
+  width:58%;
+}
+.secondchild{
+  height:100%;
+  width:40%;
+}
+.secondchild img{
+  content: url("images/image-hero-desktop.png")
+}
+.clients{
+  width:70%;
+  justify-content:space-between;
+  margin-top: 4rem
+}
 }
